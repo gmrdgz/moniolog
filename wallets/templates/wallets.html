@@ -1,0 +1,9 @@
+<h1>Wallets</h1>
+{% for wallet in wallets %}
+<ul>
+    <li>{{wallet.bank_name}}</li>
+    <ul>
+        <li>{{wallet.account_code}}</li>
+    </ul>
+</ul>
+{% endfor %}

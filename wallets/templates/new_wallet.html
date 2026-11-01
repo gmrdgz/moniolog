@@ -1,0 +1,8 @@
+<h1>New wallet</h1>
+<form action="/wallets/" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button>
+        Save
+    </button>
+</form>
