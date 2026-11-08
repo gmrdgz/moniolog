@@ -1,5 +1,5 @@
 <h1>New wallet</h1>
-<form action="/wallets/" method="POST">
+<form action="{% url 'wallets' %}" method="POST">
     {% csrf_token %}
     {{ form }}
     <button>

@@ -1,6 +1,8 @@
 from django import forms
+from .models import Wallet
 
 
-class NewWallet(forms.Form):
-    bank_name = forms.CharField(label='Bank name')
-    account_code = forms.CharField(label='Account code')
+class WalletForm(forms.ModelForm):
+    class Meta:
+        model = Wallet
+        fields = '__all__'

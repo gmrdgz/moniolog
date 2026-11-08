@@ -1,0 +1,8 @@
+<h1>Update wallet {{ id }}</h1>
+<form action="{% url 'update_wallet' id%}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button>
+        Update
+    </button>
+</form>

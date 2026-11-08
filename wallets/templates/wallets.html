@@ -5,5 +5,13 @@
     <ul>
         <li>{{wallet.account_code}}</li>
     </ul>
+    <form action="{% url 'delete_wallet' wallet.id %}" method="POST">
+        {% csrf_token %}
+        <button>Delete</button>
+    </form>
+    <form action="{% url 'update_wallet' wallet.id %}" method="GET">
+        {% csrf_token %}
+        <button>Update</button>
+    </form>
 </ul>
 {% endfor %}
